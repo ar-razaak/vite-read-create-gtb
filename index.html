@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get-the-book</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="sidebar-side">
+        <div class="avatar-container">
+          <div class="profile"></div>
+        </div>
+        <div class="menu-container">
+          <div id="home"></div>
+          <div id="addnew"></div>
+        </div>
+        <div id="addNewModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Get The New Book</h2>
+
+            <label for="bookTitle">Judul:</label>
+            <input type="text" id="bookTitleInput" name="Judul" required />
+
+            <label for="bookSubtitle">Jenis:</label>
+            <input type="text" id="bookSubtitleInput" name="Jenis" required />
+
+            <label for="bookAuthor">Penulis:</label>
+            <input type="text" id="bookAuthorInput" name="Penulis" required />
+
+            <label for="bookRating">Rating:</label>
+            <input
+              type="number"
+              id="bookRatingInput"
+              name="Rating"
+              min="1"
+              max="5"
+              required
+            />
+
+            <label for="bookCover">Cover Image:</label>
+            <input
+              type="file"
+              id="bookCoverInput"
+              name="cover"
+              accept="image/*"
+            />
+
+            <label for="bookUrl">URL:</label>
+            <input type="url" id="bookUrlInput" name="Link Buku" />
+
+            <button id="submitBtnBook">Add Book</button>
+          </div>
+          <!-- <div id="deleteConfirmModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Delete Book</h2>
+              <p>Are you sure you want to delete this book?</p>
+              <button id="confirmDeleteBtn">Yes</button>
+              <button id="cancelDeleteBtn">No</button>
+            </div> -->
+        </div>
+        <div class="bottom-container">
+          <!-- <div id="dateBox">
+            <h3 id="date">Today, 31.07.2024</h3>
+          </div> -->
+        </div>
+      </div>
+      <div class="main-side">
+        <header id="header">
+          <div id="searchBar"></div>
+          <div id="searchBtn"></div>
+        </header>
+        <div class="bookShelf">
+          <div id="bookShelfTitle">
+            <h2 id="shelfTitle">last added books</h2>
+          </div>
+          <div id="bookCardsContainer">
+            <!-- <div id="book-card">
+              <div id="coverBooks"></div>
+              <div id="ratingBook">
+                <p></p>
+              </div>
+              <div id="titleBook"></div>
+              <div id="authorBook"></div>
+              <div id="subtitleBook"></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
